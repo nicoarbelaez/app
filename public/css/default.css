@@ -1,0 +1,91 @@
+:root{
+    --primary-color: #122332;
+    --secondary-color: #124457;
+    --tertiary-color: #146f86;
+    --quaternary-color: #1aa7ba;
+    --quinary-color: #20dad8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat', sans-serif;
+}
+
+body{
+    background-color: #f5f4f4;
+}
+
+main{
+    height: 100vh;
+}
+
+header{
+    background: #fff;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.2);
+}
+
+footer{
+    background: #fff;
+    box-shadow: 0px -10px 40px rgba(0,0,0,0.2);
+}
+
+.container{
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 20px 10%;
+}
+
+.footer-copy{
+    padding: 30px 0 10px 0;
+    text-align: center;
+}
+
+.navbar, .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a, .logo{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar li{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar li a{
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar a:hover{
+    color: #1aa7ba;
+}
+
+.navbar li ul{
+    display: none;
+    position: absolute;
+    background: #e6e6e6;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+
+.navbar li:hover ul{
+    display: block;
+}
+
+.navbar li ul li{
+    margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
