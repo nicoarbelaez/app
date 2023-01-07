@@ -39,7 +39,7 @@
 
             if($this->existsSession()){
                 $roleUser = $this->getCurrentDataUser()->getRole();
-                error_log('SESSION_CONTROLLER::VALIDATE_SESSION -> roleUser: ' . $roleUser);
+                // error_log('SESSION_CONTROLLER::VALIDATE_SESSION -> roleUser: ' . $roleUser);
 
                 if($this->isPublicSite() || !$this->isAuthorizedSite()){
                     
@@ -89,7 +89,7 @@
 
         function getCurrentDataUser(){
             $id = $this->session->getCurrentUser();
-            error_log('SESSION_CONTROLLER::GET_CURRENT_DATA_USER -> id: ' . $id);
+            // error_log('SESSION_CONTROLLER::GET_CURRENT_DATA_USER -> id: ' . $id);
             $userObject = new UserModel();
             $userObject->get($id);
             return $userObject;

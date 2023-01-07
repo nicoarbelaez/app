@@ -17,3 +17,4 @@
         </div>
     </div>
 </footer>
+<script src="public/js/default.js"></script>

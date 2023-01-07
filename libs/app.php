@@ -1,6 +1,7 @@
 <?php
     include_once 'controllers/notFound.php';
     class App{
+
         function __construct(){
 
             $url = isset($_GET['url']) ? $_GET['url'] : '';

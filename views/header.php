@@ -1,18 +1,21 @@
-<header>
+    <link rel="stylesheet" href="public/css/default.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<nav>
     <div class="navbar container">
         <div class="logo">
             MARCA_LOGO
         </div>
-        <div class="nav-links">
+        <div id="nav-links">
             <ul>
-                <li><a href="home">Inicio</a></li>
-                <li><a href="history">Historial</a></li>
-                <li><a href="admin">admin</a></li>
-                <li><a href="control_panel">control panel</a></li>
-                <li><a href="operations">operations</a></li>
+                <li><a href="home" id="home">Inicio</a></li>
+                <li><a href="history" id="history">Historial</a></li>
+                <li><a href="admin" id="admin">admin</a></li>
             </ul>
         </div>
-        <div class="profile">
+        <div id="profile">
             <ul>
                 <li>
                     <a>
@@ -24,9 +27,11 @@
                     <ul>
                         <li><a href="profile">Perfi</a></li>
                         <li><a href="logout">Cerrar sesion</a></li>
+                        <li><a href="control_panel" id="control_panel">control panel</a></li>
+                        <li><a href="operations" id="operations">operations</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
-</header>
+</nav>
