@@ -1,9 +1,11 @@
 <?php
     class View{
-        function __construct(){
-        }
+
+        public $data;
 
         function render($path, $data = []){
+            $this->data = $data;
+
             require "views/{$path}.php";
         }
     }

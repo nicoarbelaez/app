@@ -50,13 +50,13 @@
                     return;
                 }
 
-                if(!is_numeric($document) || strlen($document) < 6){
+                if(!is_numeric($document) || strlen($document) < 6 || strlen($document) > 11){
                     echo "El documento no es valido";
                     $this->redirect('signup');
                     return;
                 }
 
-                if(!is_numeric($phone) || strlen($phone) < 7){
+                if(!is_numeric($phone) || strlen($phone) < 7 || strlen($phone) > 11){
                     echo "El telefono no es valido";
                     $this->redirect('signup');
                     return;

@@ -2,6 +2,8 @@
     class SessionController extends Controller{
         private $sites;
         private $sitesDefault;
+        
+        public $session;
 
         function __construct(){
             parent::__construct();
@@ -39,10 +41,8 @@
 
             if($this->existsSession()){
                 $roleUser = $this->getCurrentDataUser()->getRole();
-                // error_log('SESSION_CONTROLLER::VALIDATE_SESSION -> roleUser: ' . $roleUser);
 
                 if($this->isPublicSite() || !$this->isAuthorizedSite()){
-                    
                     $this->redirect($this->sitesDefault[$roleUser]);
 
                 }
@@ -83,7 +83,7 @@
         function getCurrentURL(){
             $url = $_SERVER['REQUEST_URI'];
             $url = explode('/', $url);
-            $url = $url[count($url) - 1];
+            $url = $url[2];
             return $url;
         }
 

@@ -27,7 +27,7 @@
 
         function save(){
             try{
-                $query = $this->prepare('INSERT INTO dp_users (id, name, lastname, type_document, document, email, phone, role, password) VALUES (UUID(), :name, :lastname, :type_document, :document, :email, :phone, :role, :password)');
+                $query = $this->prepare('INSERT INTO dp_users (id, name, lastname, type_document, document, email, phone, role, password) VALUES (UUID_TO_BIN(UUID()), :name, :lastname, :type_document, :document, :email, :phone, :role, :password)');
                 $query->execute([
                     'name' => $this->name,
                     'lastname' => $this->lastname,

@@ -1,0 +1,11 @@
+[10-Jan-2023 22:33:07 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\app\classes\session.php on line 20
+[10-Jan-2023 22:33:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\app\models\user_model.php on line 82
+[10-Jan-2023 22:33:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\app\models\user_model.php on line 83
+[10-Jan-2023 22:33:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\app\models\user_model.php on line 84
+[10-Jan-2023 22:33:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\app\models\user_model.php on line 85
+[10-Jan-2023 22:33:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\app\models\user_model.php on line 86
+[10-Jan-2023 22:33:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\app\models\user_model.php on line 87
+[10-Jan-2023 22:33:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\app\models\user_model.php on line 88
+[10-Jan-2023 22:33:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\app\models\user_model.php on line 89
+[10-Jan-2023 22:33:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\app\models\user_model.php on line 90
+[10-Jan-2023 22:34:22 Europe/Berlin] PHP Warning:  Undefined variable $data in C:\xampp\htdocs\app\controllers\history.php on line 9
