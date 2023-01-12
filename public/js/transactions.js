@@ -5,8 +5,7 @@ $(document).ready(function () {
         type: "GET",
         dataType: "json",
         success: function(data) {
-            template = templateHTML(data);
-            $('#container__transactions').html(template);
+            $('#container__transactions').html(templateHTML(data));
         }
     });
 });
@@ -18,8 +17,7 @@ $('#search').keyup(function () {
         type: "POST",
         data: {search: search},
         success: function(data) {
-            template = templateHTML(data);
-            $('#container__transactions').html(template);
+            $('#container__transactions').html(templateHTML(data));
         }
     });
 });

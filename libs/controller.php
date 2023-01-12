@@ -3,8 +3,10 @@
 
         public $view;
         public $model;
+        public $message;
 
         function __construct(){
+            $this->message = new Messages();
             $this->view = new View();
         }
 

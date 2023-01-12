@@ -10,15 +10,12 @@
             try{
                 $query = $this->prepare('INSERT INTO dp_operations (document_user, value_net, value_total, method_pay, completed) VALUES (:document_user, :value_net, :value_total, NULL, 0)');
 
-                if($this->exists($data['document_user'])){
-                    return false;
-                }
-
                 $query->execute([
                     'document_user' => $data['document_user'],
                     'value_net' => $data['value_net'],
                     'value_total' => $data['value_total'],
                 ]);
+                
                 return true;
             }catch(PDOException $e){
                 error_log('TRANSACTIONS_MODEL::SAVE -> ' . $e->getMessage());
@@ -26,7 +23,7 @@
             }
         }
 
-        private function exists($document){
+        function exists($document){
             try{
                 $query = $this->prepare('SELECT dp_operations.* FROM dp_operations INNER JOIN dp_users ON dp_users.document = dp_operations.document_user WHERE dp_operations.document_user = :document AND completed = 0');
                 $query->execute(['document' => $document]);

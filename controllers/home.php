@@ -21,6 +21,7 @@
                 $value_net = 0;
 
                 foreach($coins as $key => $value){
+
                     $keyValue = str_replace('coin_', '', $key);
                     $valuePOST = empty($this->getPOST($key)) ? 0 : $this->getPOST($key);
                     // Si esta vacia asigna valor 0
@@ -41,25 +42,28 @@
                     'value_net' => $value_net,
                     'value_total' => $value_total
                 );
-
+                
                 if(empty($value_net)){
-                    echo 'vacio';
+                    echo $this->message->getMessage(['error', 'EMPTY_FIELDS']);
                     return false;
                 }
 
                 
                 $transactionModel = new TransactionsModel();
 
+                if($transactionModel->exists($currentDocument)){
+                    echo $this->message->getMessage(['warning', 'EXISTING_REQUEST']);
+                    return false;
+                }
+            
                 if($transactionModel->save($transaction)){
-                    echo "<br> save";
+                    echo $this->message->getMessage(['success', 'SEND_REQUEST']);
                 }else{
-                    echo "<br> error";
+                    echo $this->message->getMessage(['error', 'REQUEST_NOT_SENT']);
                 }
 
-                $this->redirect('home');
             }else{
-                echo "hubo un error";
-                $this->redirect('');
+                echo $this->message->getMessage(['error', 'POST_NOT_RECEIVED']);
             }
         }
     }

@@ -25,15 +25,24 @@
                     'document_user' => $this->getPOST('document_user')
                 ];
 
-                if(!$this->verifyTransaction($array)){ return false; }
+                if(!$this->verifyTransaction($array)){
+                    echo $this->message->getMessage(['error', 'REQUEST_RECEIVED']);
+                    return false;
+                }
 
                 $transaction = new TransactionsModel();
-                $transaction->delete($array['id']);
-                return true;
+
+                if($transaction->delete($array['id'])){
+                    echo $this->message->getMessage(['success', 'DELETE_SUCCESSFULLY']);
+                    return true;
+                }else{
+                    echo $this->message->getMessage(['error', 'REQUEST_RECEIVED']);
+                }
+
             }else{
-                echo "Error: No se recibieron los datos necesarios";
-                return false;
+                echo $this->message->getMessage(['error', 'REQUEST_RECEIVED']);
             }
+            return false;
         }
 
         function completedTransaction(){
@@ -46,21 +55,28 @@
                     'document_user' => $this->getPOST('document_user')
                 ];
 
-                if(!$this->verifyTransaction($array)){ return false; }
+                if(!$this->verifyTransaction($array)){
+                    echo $this->message->getMessage(['error', 'REQUEST_RECEIVED']);
+                    return false;
+                }
 
                 $transaction = new TransactionsModel();
-                $transaction->completed($array);
-                return true;
+                if($transaction->completed($array)){
+                    echo $this->message->getMessage(['success', 'UPDATE_SUCCESSFULLY']);
+                    return true;
+                }else{
+                    echo $this->message->getMessage(['error', 'REQUEST_RECEIVED']);
+                }
+
             }else{
-                echo "Error: No se recibieron los datos necesarios";
-                return false;
+                echo $this->message->getMessage(['error', 'REQUEST_RECEIVED']);
             }
+            return false;
         }
 
         private function verifyTransaction($array){
             $transaction = new TransactionsModel();
             if(!$transaction->verify($array)){
-                echo "El usuario no tiene una transacción pendiente o no coincide los datos";
                 return false;
             }
             return true;
