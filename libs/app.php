@@ -1,12 +1,16 @@
 <?php
-    include_once 'controllers/notFound.php';
     class App{
 
         function __construct(){
 
             $url = isset($_GET['url']) ? $_GET['url'] : '';
-            $url = rtrim($url, '/');
+            
+            if($url[mb_strlen($url) - 1] == '/'){
+                $url = rtrim($url, '/');
+                header('Location: ' . constant('URL') . $url);
+            }
             $url = explode('/', $url);
+
 
             if(empty($url[0])){
 
@@ -22,7 +26,6 @@
             $fileController = 'controllers/' . $url[0] . '.php';
 
             if(file_exists($fileController)){
-
                 require_once $fileController;
                 $controller = new $url[0];
                 $controller->loadModel($url[0]);

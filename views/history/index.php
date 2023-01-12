@@ -7,7 +7,14 @@
     <title>Historial</title>
     <?php include_once 'views/header.php'?>
     <main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container" id="container__history"></div>
     </main>
+    <script src="public/js/history.js"></script>
     <?php include_once 'views/footer.php'?>
 </body>
 </html>

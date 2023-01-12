@@ -6,7 +6,7 @@
 
         function render(){
             $path = __CLASS__;
-            $this->view->render($path . '/index', $data);
+            $this->view->render($path . '/index');
         }
 
         function getHistoryJSON(){
@@ -15,7 +15,8 @@
             
             $user = new UserModel();
             $user->get($id);
-            $json = $this->model->getHistory($user->getDocument());
+            $transaction = new TransactionsModel();
+            $json = $transaction->get($user->getDocument());
             
             echo json_encode($json);
         }

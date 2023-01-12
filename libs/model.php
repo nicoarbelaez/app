@@ -9,7 +9,7 @@
         }
 
         function query($query){
-            return $this->db->connect()->querry($query);
+            return $this->db->connect()->query($query);
         }
 
         function prepare($query){

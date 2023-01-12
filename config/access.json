@@ -26,7 +26,7 @@
             "role" : "user"
         },
         {
-            "site" : "admin", 
+            "site" : "f297a57a5a743894a0e4a801fc3", 
             "access" : "private", 
             "role" : "admin"
         },
@@ -36,7 +36,7 @@
             "role" : "admin"
         },
         {
-            "site" : "operations", 
+            "site" : "transactions", 
             "access" : "private", 
             "role" : "admin"
         }
@@ -44,6 +44,6 @@
 
     "sites-default":{
         "user": "home",
-        "admin": "admin"
+        "admin": "f297a57a5a743894a0e4a801fc3"
     }
 }

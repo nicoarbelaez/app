@@ -12,7 +12,7 @@
             <ul>
                 <li><a href="home" id="home">Inicio</a></li>
                 <li><a href="history" id="history">Historial</a></li>
-                <li><a href="admin" id="admin">admin</a></li>
+                <li><a href="f297a57a5a743894a0e4a801fc3" id="admin">admin</a></li>
             </ul>
         </div>
         <div id="profile">
@@ -27,8 +27,8 @@
                     <ul>
                         <li><a href="profile">Perfi</a></li>
                         <li><a href="logout">Cerrar sesion</a></li>
-                        <li><a href="control_panel" id="control_panel">control panel</a></li>
-                        <li><a href="operations" id="operations">operations</a></li>
+                        <li><a href="control_panel" id="control_panel">Panel de control</a></li>
+                        <li><a href="transactions" id="transactions">Transaciones</a></li>
                     </ul>
                 </li>
             </ul>

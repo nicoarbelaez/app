@@ -44,7 +44,6 @@
 
                 if($this->isPublicSite() || !$this->isAuthorizedSite()){
                     $this->redirect($this->sitesDefault[$roleUser]);
-
                 }
 
             }else if(!$this->isPublicSite()){
