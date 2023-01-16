@@ -4,10 +4,10 @@ $(document).ready(function() {
     var currentURL = '#' + currentURL[4];
     // selecionar el padre del elemento actual
     var currentURL = $(currentURL).parent();
-    $(currentURL).css({
-        'color':'#fff',
-        'border-bottom':'2px solid #ccc'
-    });
+    // $(currentURL).css({
+    //     'color':'#fff',
+    //     'border-bottom':'2px solid #ccc'
+    // });
 })
 
 // window.addEventListener('scroll', function() {

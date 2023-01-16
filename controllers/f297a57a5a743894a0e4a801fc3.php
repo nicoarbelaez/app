@@ -54,7 +54,7 @@
                     'method_pay' => $this->getPOST('method_pay'),
                     'document_user' => $this->getPOST('document_user')
                 ];
-
+                
                 if(!$this->verifyTransaction($array)){
                     echo $this->message->getMessage(['error', 'REQUEST_RECEIVED']);
                     return false;
